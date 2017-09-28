@@ -1,0 +1,70 @@
+---------------------------------------
+---------------------------------------
+-- README - IO v.0.0.7               --
+-- Copyright 2017 Philentropy        --
+-- Licensed under GPLv2, see LICENSE --
+---------------------------------------
+---------------------------------------
+
+
+What's IO ?
+___________
+
+IO is an open source note-taking software using encryption methods.
+Due to its simplicity and lightness, it becomes fast to create and protect
+your notes by password and encrypt them using GPG.
+
+The IO interface is built using GTK + and is available only on GNU / Linux
+platforms. Sorry if you are using Win**** but maybe one day...
+
+
+How to install IO ?
+___________________
+
+To build IO, you must compile the source files, but before proceeding, make
+sure you have satisfied the required dependencies to run the program.
+Use your package manager and install the following packages if they are not
+already present on your system:
+
+  _ gnupg
+  _ pkg-config
+  _ GTK+-2
+  _ gobject-introspection
+  _ pango
+  _ GDK
+
+Go to the source files folder using your terminal ('src') and run the
+following commands:
+
+  make &&
+  sudo make install
+
+You should not have any problems but if you encounter any difficulties, do not
+hesitate to contact the development team at:
+	philentropy@protonmail.ch
+Or use Github's dedicated space for.
+
+
+I've got errors, bugs or unexpected behaviors. What shall I do ?
+________________________________________________________________
+
+
+Please, go to 'doc' and find a dummy issue report file (io_issue-dummy).
+Copy it, fill it and then send it to the IO's dev team at:
+  philentropy@protonmail.ch
+
+These reports are important and help us to bring you the best we can do !
+Maybe you can fix it ? Well, write a patch and submit it (rewarded in cookies).
+
+
+I  want to do more than use IO. What can I do ?
+_______________________________________________
+At first, thank you for using IO and if you have time or talent (or both), we
+invite you to add your stone to the building. You can contribute by writing
+documentation, providing patches, improving code, feedback bugs and errors and
+so much more. At each level someone can help and that's our strength, us, free
+software enthusiasts. Whether we are a developer, a worker, a boss
+or an artist, whatever, we believe in the same values.
+Together, let's write the source code of freedom.
+
+Philentropy
