@@ -11,5 +11,6 @@ clean:
 install:
 	cp -Rv io /usr/bin
 	mkdir -v /usr/share/io
+	cp -Rv ../themes /usr/share/io
 	cp -Rv ../images/io_logo.png /usr/share/io
 	cp -Rv ../images/io_about_logo.png /usr/share/io
