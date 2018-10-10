@@ -174,12 +174,12 @@ void select_font(GtkWidget *widget)
 GtkItemFactoryEntry menu_def[] =
   {
     { (char *)"/_File",            NULL,                  NULL,        0,                     (char *)"<Branch>",    NULL },
-    { (char *)"/Note/_New",        (char *)"<control>N",  menu_show,   MENU_NEW,              (char *)"<StockItem>", GTK_STOCK_NEW },
-    { (char *)"/File/_Open...",    (char *)"<control>O",  menu_show,   MENU_OPEN,             (char *)"<StockItem>", GTK_STOCK_OPEN },
-    { (char *)"/File/_Save",       (char *)"<control>S",  menu_show,   MENU_SAVE,             (char *)"<StockItem>", GTK_STOCK_SAVE },
+  //  { (char *)"/Note/_New",        (char *)"<control>N",  menu_show,   MENU_NEW,              (char *)"<StockItem>", GTK_STOCK_NEW },
+  //  { (char *)"/File/_Open...",    (char *)"<control>O",  menu_show,   MENU_OPEN,             (char *)"<StockItem>", GTK_STOCK_OPEN },
+    //{ (char *)"/File/_Save",       (char *)"<control>S",  menu_show,   MENU_SAVE,             (char *)"<StockItem>", GTK_STOCK_SAVE },
     { (char *)"/File/Save _As...", NULL,                  menu_show,   MENU_SAVE_AS,          (char *)"<StockItem>", GTK_STOCK_SAVE_AS },
     { (char *)"/File/sep",         NULL,                  NULL,        0,                     (char *)"<Separator>", NULL },
-    { (char *)"/File/_Quit",       (char *)"<control>Q",  menu_show,   MENU_QUIT,             (char *)"<StockItem>", GTK_STOCK_QUIT },
+    { (char *)"/File/_Close editor",       (char *)"<control>Q",  menu_show,   MENU_QUIT,             (char *)"<StockItem>", GTK_STOCK_QUIT },
     { (char *)"/_Edit",            NULL,                  NULL,        0,                     (char *)"<Branch>",    NULL },
     { (char *)"/Edit/C_ut",        (char *)"<control>X",  menu_show,   MENU_CUT,              (char *)"<StockItem>", GTK_STOCK_CUT },
     { (char *)"/Edit/_Copy",       (char *)"<control>C",  menu_show,   MENU_COPY,             (char *)"<StockItem>", GTK_STOCK_COPY },

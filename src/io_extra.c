@@ -3,8 +3,7 @@
    ------------------------------------------------------------------------------
    p34c3w41k3r <p34c3w41k3r@protonmail.ch>
 
-   Copyright 2017 - Philentropy
-
+   Copyright 2018 - Philentropy
    IO's is free software: you can redistribute it
    and/or modify it under the terms of the GNU General Public License as
    published by the Free Software Foundation, either version 3 of the License,
@@ -36,7 +35,7 @@ void show_about(void)
   gtk_window_set_title(GTK_WINDOW(dialog), "About IO ");
   gtk_window_set_default_size(GTK_WINDOW(dialog), 300, 300);
   gtk_about_dialog_set_name(GTK_ABOUT_DIALOG(dialog), "IO");
-  gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(dialog), "version 0.0.7");
+  gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(dialog), "version 0.0.8");
   gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(dialog),"(c) Philentropy");
   gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(dialog),
      "Take notes and encrypt them easily with IO.");

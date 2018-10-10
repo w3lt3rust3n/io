@@ -77,9 +77,24 @@ GdkPixbuf *create_pixbuf(const gchar * filename)
 
 void open_file()
 {
+  editor();
   load_file(NULL, fname_enc);
+  //printf("then fname_enc is %s\n", fname_enc);
+  //fname_enc == NULL;
+  //char *fname_enc = NULL;
+  printf("so fname_enc is %s\n", fname_enc);
 }
 
+/*void openfile()
+{
+  editor();
+  load_file(NULL, fname_enc);
+  printf("then fname_enc is %s\n", fname_enc);
+  //fname_enc == NULL;
+  char *fname_enc = NULL;
+  printf("so fname_enc is %s\n", fname_enc);
+}
+*/
 void kill_main_menu_io(GtkWidget *window)
 {
   gtk_widget_destroy(window);
@@ -180,7 +195,10 @@ int main_menu_io()
   g_signal_connect(G_OBJECT(btn1), "clicked",
     G_CALLBACK(editor), NULL);
   g_signal_connect(G_OBJECT(btn2), "clicked",
+    //G_CALLBACK(load_file(NULL, fname_enc)), NULL);
+    //G_CALLBACK(open_file), NULL);
     G_CALLBACK(open_file), NULL);
+    //load_file(NULL, fname_enc);G_CALLBACK(load_file(NULL, fname_enc), NULL);
   g_signal_connect(G_OBJECT(btn3), "clicked",
     G_CALLBACK(gtk_main_quit), NULL);
   g_signal_connect(G_OBJECT(windows), "destroy",

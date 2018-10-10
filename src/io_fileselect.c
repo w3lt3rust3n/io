@@ -138,6 +138,7 @@ static void load_file(char *fname, char fname_enc[])
     {
       printf("\033[32m[INFO]\033[0m: The uncrypted note file is correctly deleted.\n");
     }
+  fname = NULL;
 }
 
 // Save file dialog box
@@ -145,10 +146,12 @@ static gboolean save_file(char *fname)
 {
   FILE *f;
   int ok = TRUE;
+  int fsize = 0;
+  //int extloc = 0;
 
   if(!fname)
     {
-      GtkWidget *dialog = gtk_file_selection_new("Save Note As...");
+      GtkWidget *dialog = gtk_file_selection_new("Save and encrypt note as...");
       int resp = gtk_dialog_run(GTK_DIALOG(dialog));
 
       if(resp == GTK_RESPONSE_OK)
@@ -163,7 +166,7 @@ static gboolean save_file(char *fname)
 	}
     }
 
-  // Error opening file
+  // Error opening file to write
   if(!(f = fopen(fname, "w")))
     {
       g_printerr("%s: %s\n", fname, g_strerror(errno));
@@ -221,15 +224,27 @@ static gboolean save_file(char *fname)
       if(fname != filename)
 	{
 	  gchar *wt = g_strdup_printf("IO Note Encryptor (%s)", fname);
-
-	  g_free(filename);
+    //g_free(filename);
 	  filename = fname;
 	  gtk_window_set_title(GTK_WINDOW(window), wt);
 	  g_free(wt);
+
 	}
+      //DOIS ETRE ICI QUE LON MODIFIE LE NOM DU FICHIER POUR EVITER LES EXTENSIONS A RALONGE
+      printf("FNAME FOR ENCRYPT IS %s\n", fname);
+      if(strchr(fname, '.') != NULL)
+      {
+        fsize = strlen(fname);
+        printf("extension find for %s and lenght of file name is %d\n", fname, fsize);
+      }
+      else
+      {
+        printf("extension not found for %s.\n", fname);
+      }
       if(encrypt_note(fname) == 1)
 	{
-	  //puts("Error encrypting note.\n");
+	  puts("Error encrypting note.\n");
+
 	  return 1;
 	}
     }
